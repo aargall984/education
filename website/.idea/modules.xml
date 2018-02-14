@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Kinnova.iml" filepath="$PROJECT_DIR$/.idea/Kinnova.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../argall/.idea/argall.iml" filepath="$PROJECT_DIR$/../argall/.idea/argall.iml" />
     </modules>
   </component>
 </project>
