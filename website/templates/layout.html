@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mr. Argall's Classroom</title>
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="static/base.css" rel="stylesheet">
+
+    {% endblock %}
+</head>
+<body background="/static/carbon.png" bgproperties="fixed">
+
+<div id="mainheader" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 style="font-size:40px; color: white;">Mr. Argall's Classroom</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+            <ul class="nav nav-tabs">
+                {% set navigation_bar_left = [
+                    ('/', 'home', 'Home'),
+                    ('/aboutsite', 'aboutsite', 'About This Site'),
+                    ('/about', 'about', 'About Mr. Argall'),
+                ] -%}
+                {% set active_page = active_page|default('home') -%}
+                {% for href, id, caption in navigation_bar_left %}
+                    <li{% if id == active_page %} class="active"{% endif
+                    %}><a href="{{ href|e }}">{{ caption|e }}</a>
+                    </li>
+                {% endfor %}
+
+{#       <div class="col-md-4">#}
+{#             <ul class="nav nav-tabs">#}
+{#                    {% set navigation_bar_right = [#}
+{#                        ('/profile', 'profile', 'Profile'),#}
+{#                    ] -%}#}
+{#                    {% for href, id, caption in navigation_bar_right %}#}
+{#                        <li><a href="{{ href|e }}">{{ caption|e }}</a>#}
+{#                        </li>#}
+{#                    {% endfor %}#}
+{#            </ul>#}
+        </div>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div id="content" class="row">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+</body>
+</html>

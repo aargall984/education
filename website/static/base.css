@@ -1,0 +1,21 @@
+h1#sitetitle {
+    font-size: 40px;
+    color: white;
+    /*text-shadow: 5px, 5px, #080808;*/
+
+}
+body {
+    background-color: #8c8c8c;
+}
+#content.row {
+    background-color: white;
+}
+    /*background-color: hsl(0, 0%, 41%);*/
+/*
+.container {
+     padding-right: 0; !*15px in bootstrap.css*!
+     padding-left: 0;  !*idem*!
+     margin-right: auto;
+     margin-left: auto;
+}*/
+
